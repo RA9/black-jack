@@ -6,6 +6,9 @@
  */
  
  let cards = ["Queen", "Heart"]
+ let playerCards = []
+ 
+ console.log(playerCards)
  
  console.log("Welcome to the world of Black Jack a game that amuse the auidence with much fun.")
  
