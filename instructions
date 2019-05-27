@@ -1,0 +1,360 @@
+Create a Black Jack Game in Javascript
+
+The game is played by a user against a dealer. Each player is given 2 cards each at random from a shuffled deck of cards.
+
+The objective of the game is to reach 21 points or get close. With the person going over losing the game
+
+A deck of cards is composed of 52 cards from 4 suites with 13 values each.
+
+Card suits = Hearts, Spades, Daimonds, Clubs
+
+Card values = King, Queen, Jack, Ace,
+
+Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two
+
+/**********************/
+
+/****** Part One ******/
+
+/**********************/
+
+Introduction: Javascript Basics
+
+Storing Information In Variables
+
+Understanding code errors
+
+Strings and Numeric Variables
+
+Simple Operators
+
+Commenting Code
+
+STEP 1: START BLACK JACK GAME
+
++ Initialize Git repo
+
++ Create file structure
+
+- README.md
+
+- index.html
+
+- script.js
+
+- style.css
+
++ Add root folder to commit branch
+
+- README.md
+
++ a simple description of the project
+
+- index.html
+
++ basic html layout
+
++ must link css and javascript in head
+
++ must contain Document level title and heading within body tag
+
+- script.js
+
++ comment at top containing your name, app name and version(begin with v0.1.0) separate lines each
+
++ must contain atleast 2 cards
+
++ must print to console game introduction
+
++ must print to console both cards
+
+- style.css
+
++ optional 
+
++ Create first commit with message "MAJOR v0.1.0: Initialize Application Scaffold"
+
+/**********************/
+
+/****** Part Two ******/
+
+/**********************/
+
+Introduction: Types and Arrays
+
+Types Basics: Strings and numbers
+
+Boolean types
+
+undefined and null
+
+Storing multiple values in an array
+
+Array Features
+
+STEP 2: ADDING ARRAYS TO BLACK JACK GAME
+
+- index.html
+
++ no expected changes
+
+- script.js
+
++ convert card variables to array
+
++ add array: playerCards
+
++ console.log playerCards
+
++ Create second commit with message "PATCH v0.1.1: Declare cards and player decks"
+
+/**********************/
+
+/***** Part Three *****/
+
+/**********************/
+
+Introduction: Program Flow
+
+Conditionals using If()
+
+if...else
+
+switch and case
+
+Looping with for()
+
+Looping with while()
+
+STEP 3: ADDING LOOPS TO BLACK JACK GAME
+
+- script.js
+
++ set deck to empty array
+
++ add array: suit (contains all card suits)
+
++ add array: values (contains all card ranges)
+
++ populate the card deck
+
++ console.log card deck
+
++ Create third commit with message "MINOR v0.1.2: Store all cards in array"
+
+/**********************/
+
+/****** Part Four *****/
+
+/**********************/
+
+Introduction: Functions
+
+Function basics
+
+Passing information to functions
+
+Function return values
+
+Function Scope
+
+STEP 4: ADD FUNCTIONS TO BLACK JACK GAME
+
+- script.js
+
++ create a function to create the card deck
+
++ create a function to select a card from the top of the deck
+
++ Add 2 cards to the player cards using the created function
+
+- bonus: shuffle cards before selecting one
+
++ Create fourth commit with message "PATCH v0.1.3: Add functions to the game"
+
+/**********************/
+
+/****** Part Five *****/
+
+/**********************/
+
+Introduction: Objects
+
+Object Basics
+
+Passing Objects to functions
+
+Arrays of Objects
+
+Javascript builtin Objects
+
+STEP 5: ADDING OBJECTS TO BLACK JACK GAME
+
+- script.js
+
++ create a card object
+
++ store the cards in the deck
+
++ console.log players cards
+
+- bonus: use function to log out card string
+
++ Create fifth commit with message "MINOR v0.1.4: Add card object to the game" 
+
+/**********************/
+
+/****** Part Six ******/
+
+/**********************/
+
+Introduction: Programing for the web
+
+Setting up a Web Page
+
+Changing text
+
+Handling a button click
+
+Removing and adding elements
+
+STEP 6: ADDING A USER INTERFACE TO BLACK JACK GAME
+
+- index.js
+
++ add a sub heading with your name
+
++ add a paragraph block to print information to the user
+
++ Add the three buttons for contorlling the game
+
+- bonus: add some styling to the page
+
+- script.js
+
++ set variables for the dom elements(paragraph & buttons)
+
++ clean up the ui by hidding unnecessary buttons
+
++ set an event listener to start the game
+
++ clean up the UI when the game starts
+
++ clean up(remove) the console.logs since the UI is set up
+
+- bonus: add more details the screen when the game starts
+
+- style.css
+
++ optional
+
++ Create sixth commit with message "MAJOR v0.1.5: Add a user interface for the game"
+
+/**********************/
+
+/***** Final Part *****/
+
+/**********************/
+
+STEP 7: SET UP THE GAME
+
+- index.js
+
++ no expected changes
+
+- script.js
+
++ set comments for variable blocks for more readability( // Card Variables // DOM Variables // Game Variables )
+
++ create variables to track game progress
+
++ gameStarted + gameOver + playerWon + dealerCards + dealerScore +* playerScore
+
++ start tracking game status with a function: showStatus()
+
+- should determine what it's displayed in text area based on gameStarted:
+
++ improve game startup function
+
+- should set game status
+
+- should set gameOver to false
+
+- should set playerWon to false
+
+- should create the card deck
+
+- should set 2 cards to the dealers deck
+
+- should set 2 cards to the players deck
+
+- should call gamestatus function to change text displayed in text area
+
+- style.css
+
++ no expected changes
+
++ Create nth commit with message "MAJOR v0.1.6: Setup core game structure"
+
+STEP 8: SHUFFLE THE DECK
+
+- script.js
+
++ create a function to shuffle the deck
+
++ shuffle the deck on game start
+
+- bonus: test the function by printing the deck to the text area
+
++ Create nth commit with message "MAJOR v0.1.7: Add card shuffling"
+
+STEP 9: SET UP A SCORING SYSTEM FOR THE GAME
+
+- script.js
+
++ create a function that takes single argument(card) and returns number value of each card: getCardNumericValue(card)
+
+- Ace should have a value of 1
+
+- Cards Two => Nine should return the matching value of the card
+
+- Cards Jack, Queen & King should all return 10
+
++ create a function that takes a single argument(arrayOfCards) returns a number(score) based on card values: getScore(cardArray)
+
+- score should be scoped(declared) within the function
+
+- function should check for Ace cards
+
+- if Ace card is present function should add 10 to the score only if total will be less than or equal 21 after addition
+
+- it should NOT add 10 if total will be more than 21
+
++ create a function to updates the score variables: 
+
+- should update the dealerScore
+
+- should update the playerScore
+
++ update showStatus() function
+
++ set a variable(dealerCardString) to hold string value of all the cards in the Dealer's deck
+
++ set a variable(playerCardString) to hold string value of all the cards in the Player's deck
+
++ call a function to the set player and dealer scores
+
++ print dealerCardString + dealer score to the text area
+
++ print playerCardString + player score to the text area
+
++ add conditional statement to check if the game is over
+
+- should print "YOU WIN!" to text area if playerWon is true
+
+- else should print "DEALER WINS!" to text area
+
+- should clean up UI by removing the game buttons and displaying a start game button
+
+- bonus: print a custom message to screen when the game is a tie
+
