@@ -6,14 +6,13 @@
  */
  
  
- let deck = []
- let suits = ["Hearts", "Spades", "Daimonds", "Clubs"]
+ // Card Variables
  
- let values = ["King", "Queen", "Jack", "Ace","Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"]
- 
- 
+/****/ let suits = ["Hearts", "Spades", "Daimonds", "Clubs"]
+/****/ let values = ["King", "Queen", "Jack", "Ace","Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"]
+/****/
  // Define a function to create the cards deck
- function createCardDeck(){
+/****/ function createCardDeck(){
    let cardDeck = [];
    for(let i = 0; i < suits.length; i++) {
    for(let j = 0; j < values.length; j++) {
@@ -24,17 +23,18 @@
     cardDeck.push(card)
    } 
  } 
- return deck;
+ return cardDeck;
  }
- let deck = createCardDeck();
+ 
+ let decks = createCardDeck();
  
  // Define a function to select a card from the top of the deck
  function selectTopCard(){
-   return deck.shift()
+   return decks.shift()
  }
  
  function logCardString(card) {
-   return card.value + " of "+ card.suite
+   return card.value + " of "+ card.suit
  }
  
 let playerCards = [selectTopCard(),selectTopCard()]// Players card array
@@ -44,9 +44,29 @@ let playerCards = [selectTopCard(),selectTopCard()]// Players card array
  
  
  console.log("You are a dealt:")
- console.log("  " + playerCards[0])
- console.log("  " + playerCards[1])
+ console.log("  " + logCardString(playerCards[0]))
+ console.log("  " + logCardString(playerCards[1]))
  
  
+// DOM Variables
+let textArea = document.getElementById("text-area")
+let newGame = document.getElementById("new-game")
+let hit = document.getElementById("hit")
+let stay = document.getElementById("stay")
+
+
+// Game Variables
+
+hit.style.display = "none";
+stay.style.display = "none";
+
+// if user click new game button call the event listener
+newGame.addEventListener("click", function() {
+  textArea.innerText = "Starting...";
+  newGame.style.display = "none";
+  hit.style.display = "inline";
+  stay.style.display = "inline";
+})
+
  
  

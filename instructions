@@ -242,7 +242,7 @@ STEP 6: ADDING A USER INTERFACE TO BLACK JACK GAME
 
 + clean up(remove) the console.logs since the UI is set up
 
-- bonus: add more details the screen when the game starts
+- bonus: add more details to the screen when the game starts
 
 - style.css
 
