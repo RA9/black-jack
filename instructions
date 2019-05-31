@@ -171,7 +171,7 @@ STEP 4: ADD FUNCTIONS TO BLACK JACK GAME
 - bonus: shuffle cards before selecting one
 
 + Create fourth commit with message "PATCH v0.1.3: Add functions to the game"
-
+p
 /**********************/
 
 /****** Part Five *****/
