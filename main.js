@@ -27,15 +27,26 @@
  return deck;
  }
  let deck = createCardDeck();
+ 
  // Define a function to select a card from the top of the deck
  function selectTopCard(){
    return deck.shift()
  }
  
+ function logCardString(card) {
+   return card.value + " of "+ card.suite
+ }
+ 
 let playerCards = [selectTopCard(),selectTopCard()]// Players card array
- console.log(playerCards)
+ //console.log(playerCards)
  
  console.log("Welcome to the world of Black Jack a game that amuse the auidence with much fun.")
  
- console.log(cards[0])
- console.log(cards[1])
+ 
+ console.log("You are a dealt:")
+ console.log("  " + playerCards[0])
+ console.log("  " + playerCards[1])
+ 
+ 
+ 
+ 
