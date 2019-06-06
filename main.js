@@ -194,7 +194,7 @@ function checkForEndOfGame() {
 
 function showStatus() {
   if (!gameStarted) {
-    textArea.innerText = 'Welcome to Blackjack!';
+    textArea.innerHTML = 'Welcome to Blackjack!<br>The game is played by a user against a dealer. Each player is given 2 cards each at random from a shuffled deck of cards.The objective of the game is to reach 21 points or get close. With the person going over losing the game.';
     return;
   }
   
